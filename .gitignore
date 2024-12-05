@@ -1,0 +1,8 @@
+# Parcel output
+dist/
+
+# Node modules
+node_modules/
+
+# Parcel cache
+.parcel-cache
