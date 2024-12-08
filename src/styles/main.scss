@@ -1,0 +1,18 @@
+@import "./variables";
+@import "./mixins";
+
+@import "./components/header";
+@import "./components/aside";
+@import './components/main-info';
+@import './components/infografics';
+@import './components/form';
+@import './components/footer';
+
+body {
+  font-family: $font;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+

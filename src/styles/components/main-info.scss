@@ -1,0 +1,164 @@
+.main {
+  display: flex;
+  background-color: $main-base;
+  padding: 0;
+
+  &__wrapper {
+    display: flex;
+
+    @include width-small {
+      margin: 20px $margin-small;
+      gap: 10px;
+    }
+
+    @include width-medium {
+      margin: 20px $margin-medium;
+      gap: 15px;
+    }
+
+    @include width-large {
+      margin: 20px $margin-large;
+      gap: 15px;
+    }
+
+    @include width-extra-large {
+      margin: 20px $margin-xl;
+      gap: 20px;
+    }
+  }
+
+  &__text {
+    color: $light-grey;
+    display: inline-block;
+  }
+
+  &__title {
+    font-family: $font-jura;
+    font-size: 45px;
+    font-weight: 500;
+    line-height: 63px;
+    color: $main-accent;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  &__paragraf {
+    font-family: $font;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    color: $light-grey;
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  &__information {
+    border-radius: 15px;
+    background-color: $main-base-with-opacity;
+    backdrop-filter: blur(100px);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+
+    @include width-small {
+      flex-direction: column;
+      gap: 0;
+      justify-content: center;
+    }
+
+    @include width-medium {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @include width-large {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @include width-extra-large {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__secondary-title {
+    color: $main-accent;
+    font-family: $font-jura;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 16px;
+    text-align: center;
+    margin: 15px 5px;
+  }
+
+  &__info-points {
+    color: $light-grey;
+    line-height: 23px;
+  }
+
+  &__participate {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__txt {
+    font-family: $font-jura;
+    color: $main-accent;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  &__button {
+    width: 213px;
+    height: 58px;
+    border-radius: 14px;
+    background-color: $main-accent;
+    color: $main-base;
+    text-align: center;
+    font-family: $font;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    border: none;
+    margin: 0 auto;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.3s ease;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: darken($main-accent, 10%); 
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease;
+      z-index: -1;
+  }
+
+  &:hover {
+      color: #000;
+
+      &::before {
+          transform: scaleX(1);
+          transform-origin: left;
+      }
+  }
+  }
+
+  &__link {
+    color: $main-accent;
+    font-size: 16px;
+  }
+}

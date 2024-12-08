@@ -1,0 +1,100 @@
+.airdrop-infographics {
+  display: flex;
+  background-color: $main-base;
+  padding: 0;
+  flex-direction: column;
+  color: $main-accent;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+
+    @include width-small {
+      margin: 20px $margin-small;
+      gap: 10px;
+    }
+
+    @include width-medium {
+      margin: 20px $margin-medium;
+      gap: 15px;
+    }
+
+    @include width-large {
+      margin: 20px $margin-large;
+      gap: 15px;
+    }
+
+    @include width-extra-large {
+      margin: 20px $margin-xl;
+      gap: 20px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+
+    @include width-small {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @include width-medium {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @include width-large {
+      flex-direction: row;
+      gap: 25px;
+      justify-content: center;
+    }
+
+    @include width-extra-large {
+      flex-direction: row;
+      gap: 25px;
+      justify-content: center;
+    }
+  }
+
+  &__title {
+    font-family: $font-jura;
+    color: $main-accent;
+    text-align: center;
+    font-size: 24px;
+  }
+  &__item {
+    display: inline-block;
+  }
+
+  &__item-title {
+    color: $main-accent;
+    font-family: $font-jura;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 16px;
+    margin: 15px 5px;
+    text-align: center;
+  }
+
+  &__img {
+    width: 575px;
+    height: 325px;
+    border-radius: 15px;
+    margin-left: 15px;
+    text-align: center;
+
+    @include width-small {
+      width: 85%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    @include width-medium {
+      width: 85%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}

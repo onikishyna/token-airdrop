@@ -1,8 +1,26 @@
-@import "./variables";
-@import "./mixins";
+@mixin width-small {
+  @media (min-width: 320px) and (max-width: 639px) {
+    @content;
+  }
+}
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+// Міксин для ширини екрану 640–1199 px
+@mixin width-medium {
+  @media (min-width: 640px) and (max-width: 1199px) {
+    @content;
+  }
+}
+
+// Міксин для ширини екрану 1200 px
+@mixin width-large {
+  @media (width: 1200px) {
+    @content;
+  }
+}
+
+// Міксин для ширини екрану більше 1200 px
+@mixin width-extra-large {
+  @media (min-width: 1201px) {
+    @content;
+  }
 }

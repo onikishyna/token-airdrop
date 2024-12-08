@@ -1,0 +1,126 @@
+.footer {
+  display: flex;
+  background-color: $main-base;
+  padding: 0;
+  justify-content: center;
+  border-top: 1px solid $dark-grey;
+
+  &__wrapper {
+    display: flex;
+
+    @include width-small {
+      margin: 20px $margin-small;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      justify-content: center;
+    }
+
+    @include width-medium {
+      margin: 20px $margin-medium;
+      display: flex;
+      flex-direction: row;
+      gap: 85px;
+      justify-content: space-between;
+    }
+
+    @include width-large {
+      margin: 20px $margin-large;
+      display: flex;
+      flex-direction: row;
+      gap: 200px;
+      justify-content: space-between;
+    }
+
+    @include width-extra-large {
+      margin: 20px $margin-xl;
+      display: flex;
+      flex-direction: row;
+      gap: 250px;
+      justify-content: space-between;
+    }
+  }
+
+  &__links {
+    font-family: $font-jura;
+    text-decoration: none;
+    color: $main-accent;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 16px;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    color: $main-accent;
+    font-family: $font;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.contacts-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.links-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    gap: 16px;
+    text-decoration: none;
+  }
+
+  &__item {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: $main-accent;
+    font-family: $font;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    padding-bottom: 6px;
+
+    background: linear-gradient(currentColor 0 0) 100% 100% / var(--d, 0) 3px
+      no-repeat;
+    transition: 0.5s;
+
+    &:hover {
+      --d: 100%;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $main-accent;
+  }
+}
